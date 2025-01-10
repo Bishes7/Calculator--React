@@ -1,0 +1,110 @@
+/* body {
+  height: 100vh;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator{
+  display: grid;
+  margin: 0 auto;
+  margin: 0.5rem;
+  grid-template-areas:
+    "display display display display"
+    "btn-ac btn-c btn-div btn-per"
+    "btn-sev btn-eight btn-nine btn-mul"
+    "btn-four btn-five btn-six btn-minus"
+    "btn-one btn-two btn-three btn-plus"
+    "btn-zero btn-dot btn-equal btn-equal"; 
+}
+
+.container {
+  width: 450px;
+  box-shadow: 0px 20px 5px gray;
+
+  background: red;
+ 
+}
+.btn {
+  background: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  margin: 1rem;
+  box-shadow: 3px 5px 5px 0;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+
+.display {
+  grid-area: display;
+  padding: 2rem;
+  background: rgba(128, 128, 128, 0.837);
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  box-shadow: 0 0 10px 0;
+  border-radius: 10px;
+}
+
+.btn-ac {
+  grid-area: btn-ac;
+}
+.btn-c {
+  grid-area: btn-c;
+}
+.btn-divide {
+  grid-area: btn-div;
+}
+.btn-per {
+  grid-area: btn-per;
+}
+.btn-seven {
+  grid-area: btn-sev;
+}
+.btn-eight {
+  grid-area: btn-eight;
+}
+.btn-nine {
+  grid-area: btn-nine;
+}
+.btn-mul {
+  grid-area: btn-mul;
+}
+.btn-four {
+  grid-area: btn-four;
+}
+
+.btn-five {
+  grid-area: btn-five;
+}
+.btn-six {
+  grid-area: btn-six;
+}
+.btn-minus {
+  grid-area: btn-minus;
+}
+
+.btn-one {
+  grid-area: btn-one;
+}
+.btn-two {
+  grid-area: btn-two;
+}
+.btn-three {
+  grid-area: btn-three;
+}
+.btn-plus {
+  grid-area: btn-plus;
+}
+.btn-zero {
+  grid-area: btn-zero;
+}
+.btn-dot {
+  grid-area: btn-dot;
+}
+.btn-equal {
+  grid-area: btn-equal;
+} */
