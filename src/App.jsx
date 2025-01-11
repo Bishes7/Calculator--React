@@ -2,28 +2,49 @@ import { useState } from "react";
 import "./App.css";
 
 function App() {
+  // make a state to update the display in the calulator
   const [display, setDisplay] = useState([]);
 
-  const handleOnCLick = (e) => {
-    const { innerText } = e.target;
+  const operators = ["/", "+", "-", "*", "%"];
+  const handleOnclick = (e) => {
     e.preventDefault();
-
+    const { innerText } = e.target;
     setDisplay([...display, innerText]);
 
     if (innerText === "AC") {
-      setDisplay("");
+      setDisplay([]);
     }
 
+    // making the C button work
     if (innerText === "C") {
-      const newText = display.slice(0, -1);
-      setDisplay(newText);
+      const newDisplay = display.slice(0, -1);
+
+      setDisplay(newDisplay);
+    }
+
+    // making = button work
+    const lastCharIndex = display[display.length - 1];
+    if (innerText === "=") {
+      try {
+        const result = [eval(display.join(""), innerText)];
+        setDisplay(result);
+      } catch (error) {
+        setDisplay("Error");
+      }
+    }
+
+    if (operators.includes(innerText) && operators.includes(lastCharIndex)) {
+      setDisplay([...display.slice(0, -1), innerText]);
+    }
+
+    if (".".includes(innerText) && ".".includes(lastCharIndex)) {
+      setDisplay([...display.slice(0, -1), innerText]);
     }
   };
-
   return (
     <div className="container">
-      <form className="calculator" onClick={handleOnCLick}>
-        <div className="display">{display}</div>
+      <form className="calculator" onClick={handleOnclick}>
+        <div className="display">{display} </div>
         <div className="btn btn-ac">AC</div>
         <button className="btn btn-c">C</button>
         <button className="btn btn-divide">/</button>
