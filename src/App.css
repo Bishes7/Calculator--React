@@ -22,7 +22,7 @@ body {
   width: 450px;
   box-shadow: 10px 20px 5px gray;
 
-  background: red;
+  background: rgba(255, 0, 0, 0.753);
   border-radius: 20px;
 }
 .btn {
@@ -37,13 +37,18 @@ body {
   font-size: 1.5rem;
   border-radius: 12px;
 }
+.btn:hover {
+  background: rgba(255, 255, 0, 0.818);
+  transition: all 0.5s;
+  transform: scale(1.1);
+}
 
 .display {
   grid-area: display;
   padding: 2.3rem;
-  background: rgba(128, 128, 128, 0.837);
+  background: rgba(135, 135, 235, 0.852);
   margin: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   box-shadow: 0 0 20px 0;
   border-radius: 10px;
   text-align: end;
